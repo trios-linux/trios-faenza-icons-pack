@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+#if [ -f /usr/share/icons/faenza-wolfe-trios/FaenzaWolfe.tar.gz ]; then
+
+gtk-update-icon-cache /usr/share/icons/Faenza && gtk-update-icon-cache /usr/share/icons/Faenza-Dark && gtk-update-icon-cache /usr/share/icons/Faenza-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Grey && gtk-update-icon-cache /usr/share/icons/Faenza-Grey-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Darker
