@@ -7,7 +7,7 @@ Standards-Version: 3.9.1
 
 Package: faenza-icons-pack-trios
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libgtk2.0-0 | libgtk-3-0
 Description: Faenza Icon Theme
  The Faenza icon theme provide monochromatic icons for panels, 
  toolbars and buttons and squared colorful icons for applications,
