@@ -1,6 +1,16 @@
 #!/bin/sh
 set -e
 
-#if [ -f /usr/share/icons/faenza-wolfe-trios/FaenzaWolfe.tar.gz ]; then
+# Check for "gtk-update-icon-cache", if both found prefer v2, if not skip and inform the user:
 
-gtk-update-icon-cache /usr/share/icons/Faenza && gtk-update-icon-cache /usr/share/icons/Faenza-Dark && gtk-update-icon-cache /usr/share/icons/Faenza-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Grey && gtk-update-icon-cache /usr/share/icons/Faenza-Grey-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Darker
+if [ -e /usr/bin/gtk-update-icon-cache ], 
+	then 
+		echo "Using gtk-update-icon-cache v2\n" && gtk-update-icon-cache /usr/share/icons/Faenza && gtk-update-icon-cache /usr/share/icons/Faenza-Dark && gtk-update-icon-cache /usr/share/icons/Faenza-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Grey && gtk-update-icon-cache /usr/share/icons/Faenza-Grey-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe && gtk-update-icon-cache /usr/share/icons/Faenza-Wolfe-Darkest && gtk-update-icon-cache /usr/share/icons/Faenza-Darker
+	else
+		if [ -e /usr/bin/gtk-update-icon-cache-3.0 ], 
+	then 
+		echo "Using gtk-update-icon-cache v3\n" && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Dark && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Darkest && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Grey && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Grey-Darkest && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Wolfe && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Wolfe-Darkest && gtk-update-icon-cache-3.0 /usr/share/icons/Faenza-Darker
+	else
+		echo '\n"gtk-update-icon-cache not" found. Skipping. \nPlease create icon cache manually for every "Faenza*" directory under /usr/share/icons!!!\n'
+	fi
+fi
