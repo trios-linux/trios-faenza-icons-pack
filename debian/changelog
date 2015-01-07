@@ -1,3 +1,9 @@
+faenza-icons-pack-trios (1.3.5) testing; urgency=low
+
+  * Add "Wolfe Dark" variant. For themes with dark panels.
+
+ -- Filip Danilovic <filip@openmailbox.org>  Wed, 07 Jan 2015 23:27:00 +0100
+
 faenza-icons-pack-trios (1.3.4) testing; urgency=low
 
   * Fix volume icons, for Audacious and possibly other gtk3 apps...
